@@ -45,9 +45,14 @@ jobs:
       with:
         languages: ${{ matrix.language }}
 
-    - run: |
+    - name: Jib Build
+      run: |
         cd examples/helloworld
-        mvn compile jib:build
+        # Builds to a container image registry.
+        #$ mvn compile jib:build
+        
+        # Builds to a Docker daemon.
+        $ mvn compile jib:dockerBuild
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
