@@ -44,6 +44,9 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
+        
+    - name: hello docker daemon
+      run: docker info
 
     - name: Jib Build
       run: |
