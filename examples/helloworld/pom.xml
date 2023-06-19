@@ -40,7 +40,7 @@
         <version>${jib-maven-plugin.version}</version>
         <configuration>
           <to>
-            <image>gcr.io/REPLACE-WITH-YOUR-GCP-PROJECT/image-built-with-jib</image>
+            <image>${env.REGISTRY}/${env.IMAGE_NAME}/helloworld</image>
           </to>
         </configuration>
         <executions>
