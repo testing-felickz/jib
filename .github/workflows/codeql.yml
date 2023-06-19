@@ -22,7 +22,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository }} # For example, slash-separated name components cannot have uppercase letters: Invalid image reference: gcr.io/REPLACE-WITH-YOUR-GCP-PROJECT/image-built-with-jib
 
 jobs:
   analyze:
