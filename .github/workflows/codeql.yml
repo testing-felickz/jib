@@ -40,6 +40,7 @@ jobs:
       fail-fast: false
       matrix:
         language: [ 'java']
+        project: ['helloworld', 'multi-module']
 
     steps:
     - name: Checkout repository
@@ -64,7 +65,7 @@ jobs:
 
     - name: Jib Build
       run: |
-        cd examples/helloworld
+        cd examples/${{ matrix.project }}
         # Builds to a container image registry.
         #mvn compile jib:build
         
